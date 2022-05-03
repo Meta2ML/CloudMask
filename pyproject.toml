@@ -1,0 +1,49 @@
+[tool.poetry]
+name = "cloudmask"
+version = "0.1.0"
+description = "Cloud mask with Landsat 8"
+license = "MIT"
+authors = ["XavierJiezou <878972272@qq.com>"]
+maintainers = []
+readme = "README.md"
+homepage = "https://github.com/XavierJiezou/CloudMask"
+repository = "https://github.com/XavierJiezou/CloudMask"
+documentation = "https://github.com/XavierJiezou/CloudMask"
+keywords = ["network speed", "monitor"]
+classifiers = ["Topic :: Software Development :: Libraries"]
+packages = [{ include = "cloudmask" }]
+include = ["CHANGELOG.md"]
+exclude = []
+
+[tool.poetry.build]
+generate-setup-file = false
+
+[tool.poetry.dependencies]
+python = "^3.7"
+fire = "^0.4.0"
+rich = "^12.3.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^7.1.2"
+autopep8 = "^1.6.0"
+toml = "^0.10.2"
+pytest-cov = "^3.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[[tool.poetry.source]]
+name = "tsinghua-pypi"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = ["tests"]
+python_files = "test_*.py"
+python_classes = "Test*"
+python_functions = "test"
+
+[tool.poetry.scripts]
+mask = "cloudmask.cli:main"
