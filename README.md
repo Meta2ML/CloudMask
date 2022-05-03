@@ -1,6 +1,7 @@
 # CloudMask
 
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/XavierJiezou/CloudMask/Release)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/4e0701c6689249cebe02a6c0ae0e96d1)](https://app.codacy.com/gh/XavierJiezou/CloudMask?utm_source=github.com&utm_medium=referral&utm_content=XavierJiezou/CloudMask&utm_campaign=Badge_Grade_Settings)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/4b2dcde7f09548f5a49df43fbb0c3beb)](https://www.codacy.com/gh/XavierJiezou/CloudMask/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=XavierJiezou/CloudMask&amp;utm_campaign=Badge_Grade)
 ![Codecov](https://img.shields.io/codecov/c/github/XavierJiezou/CloudMask)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/CloudMask)
