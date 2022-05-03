@@ -10,7 +10,7 @@ homepage = "https://github.com/XavierJiezou/CloudMask"
 repository = "https://github.com/XavierJiezou/CloudMask"
 documentation = "https://github.com/XavierJiezou/CloudMask"
 keywords = ["landsat8", "cloud", "mask"]
-classifiers = ["Topic :: Software Development :: Libraries"]
+classifiers = ["Topic :: Software Development :: Libraries :: Python Modules"]
 packages = [{ include = "cloudmask" }]
 include = ["CHANGELOG.md"]
 exclude = []
