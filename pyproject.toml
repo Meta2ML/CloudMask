@@ -9,7 +9,7 @@ readme = "README.md"
 homepage = "https://github.com/XavierJiezou/CloudMask"
 repository = "https://github.com/XavierJiezou/CloudMask"
 documentation = "https://github.com/XavierJiezou/CloudMask"
-keywords = ["network speed", "monitor"]
+keywords = ["landsat8", "cloud", "mask"]
 classifiers = ["Topic :: Software Development :: Libraries"]
 packages = [{ include = "cloudmask" }]
 include = ["CHANGELOG.md"]
