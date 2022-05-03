@@ -46,4 +46,4 @@ python_classes = "Test*"
 python_functions = "test"
 
 [tool.poetry.scripts]
-mask = "cloudmask.cli:main"
+cloudmask = "cloudmask.cli:main"
