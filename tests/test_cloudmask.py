@@ -1,7 +1,8 @@
-from cloudmask import __version__
+from cloudmask.cli import CloudMaskCLI
 import toml
 
 
-def test_version():
-    version = toml.load('pyproject.toml')['tool']['poetry']['version']
-    assert version == __version__
+class TestCloudMaskCLI(CloudMaskCLI):
+    def test_version(self):
+        version = toml.load('pyproject.toml')['tool']['poetry']['version']
+        assert version == self.version()
