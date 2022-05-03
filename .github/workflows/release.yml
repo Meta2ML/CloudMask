@@ -9,6 +9,8 @@ jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -34,7 +36,7 @@ jobs:
             || echo ::set-output name=prerelease::true
 
       - name: Create Release
-        uses: ncipollo/release-action@v3
+        uses: ncipollo/release-action@v1
         with:
           artifacts: "dist/*"
           token: ${{ secrets.GITHUB_TOKEN }}
