@@ -34,7 +34,7 @@ jobs:
             || echo ::set-output name=prerelease::true
 
       - name: Create Release
-        uses: ncipollo/release-action@master
+        uses: ncipollo/release-action@v3
         with:
           artifacts: "dist/*"
           token: ${{ secrets.GITHUB_TOKEN }}
