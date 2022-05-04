@@ -540,7 +540,7 @@ reference = "tsinghua-pypi"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.7"
-content-hash = "54bd1bc0e439a1b9b1d74c5513757b5305aa6ac350dac486dcb436f39cd3cae7"
+content-hash = "4c452fa59a6a5e4f7759132795931f9e9fb5555f197f6812a914a11e45fcb1b4"
 
 [metadata.files]
 astroid = [
