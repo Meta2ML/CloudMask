@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cloudmask"
-version = "0.1.1"
+version = "0.1.2"
 description = "Cloud mask with Landsat 8"
 license = "MIT"
 authors = ["XavierJiezou <878972272@qq.com>"]
