@@ -74,7 +74,7 @@
 
 ## Demo
 
-![demo](../image/demo.png)
+![demo](https://cdn.jsdelivr.net/gh/XavierJiezou/CloudMask@main/images/favicon.svg)
 
 ## Features
 
