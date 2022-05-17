@@ -1,13 +1,19 @@
+from __future__ import annotations
+
 import fire
+
 from cloudmask import __version__
 
-class CloudMaskCLI:
-    @staticmethod
-    def version():
+
+class CloudMaskCli:
+    @property
+    def version(self) -> str:
         return __version__
 
-def main():
-    fire.Fire(CloudMaskCLI)
 
-if __name__=='__main__':
+def main() -> None:
+    fire.Fire(CloudMaskCli)
+
+
+if __name__ == "__main__":
     main()
