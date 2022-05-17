@@ -1,7 +1,7 @@
 <p align="center">
     <a href="https://pixelied.com/editor/design/6282f5970515730397249959">
         <img align="center" alt="logo"
-            src="https://raw.githubusercontent.com/XavierJiezou/CloudMask/main/images/favicon.svg" />
+            src="https://cdn.jsdelivr.net/gh/XavierJiezou/CloudMask@main/images/favicon.svg" />
     </a>
 <h1 align="center">Cloud Mask</h1>
 <p align="center">Cloud mask with Landsat 8 and Sentinel 2.
