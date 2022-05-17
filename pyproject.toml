@@ -27,8 +27,10 @@ rich = "^12.3.0"
 pytest = "^7.1.2"
 toml = "^0.10.2"
 pytest-cov = "^3.0.0"
-pylint = "^2.13.8"
 black = "^22.3.0"
+flake8 = "^4.0.1"
+pre-commit = "^2.19.0"
+pylint = "^2.13.9"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
