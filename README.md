@@ -8,23 +8,23 @@
 </p>
 </p>
 <p align="center">
-    <a href="https://github.com/Meta2ML/CloudMask/actions?query=workflow:Release">
-        <img src="https://github.com/Meta2ML/CloudMask/workflows/Release/badge.svg"
+    <a href="https://github.com/XavierJiezou/CloudMask/actions?query=workflow:Release">
+        <img src="https://github.com/XavierJiezou/CloudMask/workflows/Release/badge.svg"
             alt="GitHub Workflow Release Status" />
     </a>
-    <a href="https://github.com/Meta2ML/CloudMask/actions?query=workflow:Test">
-	    <img src="https://github.com/Meta2ML/CloudMask/workflows/Test/badge.svg"
+    <a href="https://github.com/XavierJiezou/CloudMask/actions?query=workflow:Test">
+	    <img src="https://github.com/XavierJiezou/CloudMask/workflows/Test/badge.svg"
             alt="GitHub Workflow Test Status" />
     </a>
     <a href='https://cloudmask.readthedocs.io/en/latest/?badge=latest'>
         <img src='https://readthedocs.org/projects/cloudmask/badge/?version=latest' alt='Documentation Status' />
     </a>
     <a
-        href="https://www.codacy.com/gh/Meta2ML/CloudMask/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Meta2ML/CloudMask&amp;utm_campaign=Badge_Grade">
+        href="https://www.codacy.com/gh/XavierJiezou/CloudMask/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=XavierJiezou/CloudMask&amp;utm_campaign=Badge_Grade">
         <img src="https://app.codacy.com/project/badge/Grade/c2f85c8d6b8a4892b40059703f087eab" alt="Codacy Badge">
     </a>
     <a href="https://codecov.io/gh/XavierJiezou/CloudMask">
-        <img src="https://codecov.io/gh/Meta2ML/CloudMask/branch/main/graph/badge.svg?token=QpCLcUGoYx"
+        <img src="https://codecov.io/gh/XavierJiezou/CloudMask/branch/main/graph/badge.svg?token=QpCLcUGoYx"
             alt="codecov">
     </a>
     <a href="https://pypi.org/project/cloudmask/">
@@ -37,16 +37,16 @@
         <img src="https://img.shields.io/pypi/pyversions/CloudMask" alt="PyPI - Python Version">
     </a>
     <a href="https://github.com/XavierJiezou/CloudMask/stargazers">
-        <img src="https://img.shields.io/github/stars/Meta2ML/CloudMask" alt="GitHub stars">
+        <img src="https://img.shields.io/github/stars/XavierJiezou/CloudMask" alt="GitHub stars">
     </a>
     <a href="https://github.com/XavierJiezou/CloudMask/network">
-        <img src="https://img.shields.io/github/forks/Meta2ML/CloudMask" alt="GitHub forks">
+        <img src="https://img.shields.io/github/forks/XavierJiezou/CloudMask" alt="GitHub forks">
     </a>
     <a href="https://github.com/XavierJiezou/CloudMask/issues">
-        <img src="https://img.shields.io/github/issues/Meta2ML/CloudMask" alt="GitHub issues">
+        <img src="https://img.shields.io/github/issues/XavierJiezou/CloudMask" alt="GitHub issues">
     </a>
     <a href="https://github.com/XavierJiezou/CloudMask/blob/main/LICENSE">
-        <img src="https://img.shields.io/github/license/Meta2ML/CloudMask" alt="GitHub license">
+        <img src="https://img.shields.io/github/license/XavierJiezou/CloudMask" alt="GitHub license">
     </a>
     <a href="https://github.com/psf/black">
         <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg" />
@@ -64,9 +64,9 @@
 <p align="center">
     <a href="#demo">View Demo</a>
     •
-    <a href="https://github.com/Meta2ML/CloudMask/issues/new">Report Bug</a>
+    <a href="https://github.com/XavierJiezou/CloudMask/issues/new">Report Bug</a>
     •
-    <a href="https://github.com/Meta2ML/CloudMask/issues/new">Request Feature</a>
+    <a href="https://github.com/XavierJiezou/CloudMask/issues/new">Request Feature</a>
 </p>
 <p align="center">
     <a href="/docs/README.en.md">English </a>
