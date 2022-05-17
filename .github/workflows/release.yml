@@ -4,9 +4,9 @@ on:
   push:
     tags:
       - "*.*.*"
-  pull_request:
-    tags:
-      - "*.*.*"
+  # pull_request:
+  #   tags:
+  #     - "*.*.*"
 
 jobs:
   release:
