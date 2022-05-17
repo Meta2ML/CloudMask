@@ -4,7 +4,7 @@
             src="https://raw.githubusercontent.com/XavierJiezou/CloudMask/main/images/favicon.svg" />
     </a>
 <h1 align="center">Cloud Mask</h1>
-<p align="center">Cloud mask with Landsat 8.
+<p align="center">Cloud mask with Landsat 8 and Sentinel 2.
 </p>
 </p>
 <p align="center">
