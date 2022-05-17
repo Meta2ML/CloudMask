@@ -9,8 +9,12 @@
 </p>
 <p align="center">
     <a href="https://github.com/XavierJiezou/CloudMask/actions?query=workflow:Release">
-        <img src="https://img.shields.io/github/workflow/status/XavierJiezou/CloudMask/Release"
-            alt="GitHub Workflow Status" />
+        <img src="https://github.com/XavierJiezou/CloudMask/workflows/Release/badge.svg"
+            alt="GitHub Workflow Release Status" />
+    </a>
+    <a href="https://github.com/XavierJiezou/CloudMask/actions?query=workflow:Test">
+	    <img src="https://github.com/XavierJiezou/CloudMask/workflows/Test/badge.svg"
+            alt="GitHub Workflow Test Status" />
     </a>
     <a href='https://cloudmask.readthedocs.io/en/latest/?badge=latest'>
         <img src='https://readthedocs.org/projects/cloudmask/badge/?version=latest' alt='Documentation Status' />
