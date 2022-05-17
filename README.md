@@ -12,6 +12,9 @@
         <img src="https://img.shields.io/github/workflow/status/XavierJiezou/CloudMask/Release"
             alt="GitHub Workflow Status" />
     </a>
+    <a href='https://cloudmask.readthedocs.io/en/latest/?badge=latest'>
+        <img src='https://readthedocs.org/projects/cloudmask/badge/?version=latest' alt='Documentation Status' />
+    </a>
     <a
         href="https://www.codacy.com/gh/XavierJiezou/CloudMask/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=XavierJiezou/CloudMask&amp;utm_campaign=Badge_Grade">
         <img src="https://app.codacy.com/project/badge/Grade/c2f85c8d6b8a4892b40059703f087eab" alt="Codacy Badge">
