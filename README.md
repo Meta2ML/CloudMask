@@ -1,12 +1,12 @@
 <p align="center">
     <a href="https://pixelied.com/editor/design/6282f5970515730397249959">
         <img align="center" alt="logo"
-            src="https://cdn.jsdelivr.net/gh/XavierJiezou/CloudMask@main/images/favicon_256x256.svg" />
+            src="https://raw.githubusercontent.com/XavierJiezou/CloudMask/main/images/favicon_256x256.svg" />
     </a>
-<h1 align="center">Cloud Mask</h1>
-<p align="center">Cloud mask with Landsat 8 and Sentinel 2.
+    <h1 align="center">Cloud Mask</h1>
+    <p align="center">Cloud mask with Landsat 8 and Sentinel 2.</p>
 </p>
-</p>
+
 <p align="center">
     <a href="https://github.com/XavierJiezou/CloudMask/actions?query=workflow:Release">
         <img src="https://github.com/XavierJiezou/CloudMask/workflows/Release/badge.svg"
@@ -15,6 +15,10 @@
     <a href="https://github.com/XavierJiezou/CloudMask/actions?query=workflow:Test">
 	    <img src="https://github.com/XavierJiezou/CloudMask/workflows/Test/badge.svg"
             alt="GitHub Workflow Test Status" />
+    </a>
+    <a href="https://github.com/XavierJiezou/CloudMask/actions?query=workflow:Lint">
+	    <img src="https://github.com/XavierJiezou/CloudMask/workflows/Lint/badge.svg"
+            alt="GitHub Workflow Lint Status" />
     </a>
     <a href='https://cloudmask.readthedocs.io/en/latest/?badge=latest'>
         <img src='https://readthedocs.org/projects/cloudmask/badge/?version=latest' alt='Documentation Status' />
@@ -68,17 +72,19 @@
     •
     <a href="https://github.com/XavierJiezou/CloudMask/issues/new">Request Feature</a>
 </p>
+
 <p align="center">
     <a href="/docs/README.en.md">English </a>
     •
     <a href="/docs/README.cn.md">简体中文</a>
 </p>
-</p>
+
 <p align="center">Love the project? Please consider <a href="https://paypal.me/xavierjiezou?country.x=C2&locale.x=zh_XC">donating</a> to help it improve!
+</p>
 
 ## Demo
 
-![demo](https://cdn.jsdelivr.net/gh/XavierJiezou/CloudMask@main/images/favicon_256x256.svg)
+![demo](https://raw.githubusercontent.com/XavierJiezou/CloudMask/main/images/favicon_256x256.svg)
 
 ## Features
 
