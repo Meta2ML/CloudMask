@@ -1,20 +1,23 @@
-<p align="center">
-    <a href="https://pixelied.com/editor/design/6282f5970515730397249959">
-        <img align="center" alt="logo"
-            src="https://cdn.jsdelivr.net/gh/XavierJiezou/CloudMask@main/images/favicon_256x256.svg" />
-    </a>
-<h1 align="center">Cloud Mask</h1>
-<p align="center">Cloud mask with Landsat 8 and Sentinel 2.
-</p>
-</p>
-<p align="center">
+<div align="center">
+
+[![logo](https://raw.githubusercontent.com/XavierJiezou/CloudMask/main/images/favicon_256x256.svg)](https://pixelied.com/editor/design/6282f5970515730397249959)
+
+# Cloud Mask
+
+Cloud Mask with Landsat 8 and Sentinel 2.
+
+<p>
     <a href="https://github.com/XavierJiezou/CloudMask/actions?query=workflow:Release">
         <img src="https://github.com/XavierJiezou/CloudMask/workflows/Release/badge.svg"
             alt="GitHub Workflow Release Status" />
     </a>
     <a href="https://github.com/XavierJiezou/CloudMask/actions?query=workflow:Test">
-	    <img src="https://github.com/XavierJiezou/CloudMask/workflows/Test/badge.svg"
+        <img src="https://github.com/XavierJiezou/CloudMask/workflows/Test/badge.svg"
             alt="GitHub Workflow Test Status" />
+    </a>
+    <a href="https://github.com/XavierJiezou/CloudMask/actions?query=workflow:Lint">
+        <img src="https://github.com/XavierJiezou/CloudMask/workflows/Lint/badge.svg"
+            alt="GitHub Workflow Lint Status" />
     </a>
     <a href='https://cloudmask.readthedocs.io/en/latest/?badge=latest'>
         <img src='https://readthedocs.org/projects/cloudmask/badge/?version=latest' alt='Documentation Status' />
@@ -33,9 +36,9 @@
     <a href="https://pypistats.org/packages/cloudmask">
         <img src="https://img.shields.io/pypi/dm/CloudMask" alt="PyPI - Downloads">
     </a>
-    <a href="https://pypi.org/project/cloudmask/">
+    <!-- <a href="https://pypi.org/project/cloudmask/">
         <img src="https://img.shields.io/pypi/pyversions/CloudMask" alt="PyPI - Python Version">
-    </a>
+    </a> -->
     <a href="https://github.com/XavierJiezou/CloudMask/stargazers">
         <img src="https://img.shields.io/github/stars/XavierJiezou/CloudMask" alt="GitHub stars">
     </a>
@@ -48,37 +51,53 @@
     <a href="https://github.com/XavierJiezou/CloudMask/blob/main/LICENSE">
         <img src="https://img.shields.io/github/license/XavierJiezou/CloudMask" alt="GitHub license">
     </a>
-    <a href="https://github.com/psf/black">
+    <!-- <a href="https://github.com/psf/black">
         <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg" />
-    </a>
-    <br />
-    <br />
-    <a href="https://www.python.org/">
+    </a> -->
+</p>
+
+<p>
+    <!-- <a href="https://www.python.org/">
         <img src="http://ForTheBadge.com/images/badges/made-with-python.svg" alt="forthebadge made-with-python">
     </a>
     <a href="https://github.com/XavierJiezou">
         <img src="http://ForTheBadge.com/images/badges/built-with-love.svg" alt="ForTheBadge built-with-love">
+    </a> -->
+    <a href="https://www.python.org/">
+        <img alt="Python" src="https://img.shields.io/badge/-Python 3.7+-blue?style=for-the-badge&logo=python&logoColor=white"></a>
+    <a href="https://pytorch.org/get-started/locally/">
+        <img alt="PyTorch" src="https://img.shields.io/badge/-PyTorch 1.8+-ee4c2c?style=for-the-badge&logo=pytorch&logoColor=white"></a>
+    <a href="https://pytorchlightning.ai/">
+        <img alt="Lightning" src="https://img.shields.io/badge/-Lightning 1.5+-792ee5?style=for-the-badge&logo=pytorchlightning&logoColor=white">
+    </a>
+    <a href="https://hydra.cc/">
+        <img alt="Config: hydra" src="https://img.shields.io/badge/config-hydra 1.1-89b8cd?style=for-the-badge&labelColor=gray"></a>
+    <a href="https://black.readthedocs.io/en/stable/">
+        <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-black.svg?style=for-the-badge&labelColor=gray">
     </a>
 </p>
 
-<p align="center">
+<p>
     <a href="#demo">View Demo</a>
     •
     <a href="https://github.com/XavierJiezou/CloudMask/issues/new">Report Bug</a>
     •
     <a href="https://github.com/XavierJiezou/CloudMask/issues/new">Request Feature</a>
 </p>
-<p align="center">
+
+<p>
     <a href="/docs/README.en.md">English </a>
     •
     <a href="/docs/README.cn.md">简体中文</a>
 </p>
-</p>
-<p align="center">Love the project? Please consider <a href="https://paypal.me/xavierjiezou?country.x=C2&locale.x=zh_XC">donating</a> to help it improve!
+
+Love the project? Please consider [donating](https://paypal.me/xavierjiezou?country.x=C2&locale.x=zh_XC) to help it improve!
+
+</div>
 
 ## Demo
 
-![demo](https://cdn.jsdelivr.net/gh/XavierJiezou/CloudMask@main/images/favicon_256x256.svg)
+![demo](https://raw.githubusercontent.com/XavierJiezou/CloudMask/main/images/favicon_256x256.svg)
 
 ## Features
 
@@ -97,11 +116,11 @@ pip install cloudmask
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md)
+See [CHANGELOG.md](/CHANGELOG.md)
 
 ## License
 
-[MIT License](License)
+[MIT License](/LICENSE)
 
 ## Dependencies
 
