@@ -97,11 +97,11 @@ pip install cloudmask
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md)
+See [CHANGELOG.md](/CHANGELOG.md)
 
 ## License
 
-[MIT License](License)
+[MIT License](/License)
 
 ## Dependencies
 
