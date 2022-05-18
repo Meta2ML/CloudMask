@@ -101,7 +101,7 @@ See [CHANGELOG.md](/CHANGELOG.md)
 
 ## License
 
-[MIT License](/License)
+[MIT License](/LICENSE)
 
 ## Dependencies
 
