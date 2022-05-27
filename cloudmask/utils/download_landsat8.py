@@ -49,9 +49,9 @@ class DownloadLandsat8:
         scene_class = [
             "Barren",
             "Forest",
-            "Grass|Crops",
+            "Grass-Crops",
             "Shrubland",
-            "Snow|Ice",
+            "Snow-Ice",
             "Urban",
             "Water",
             "Wetlands",
