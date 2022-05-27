@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import fire
 
 from cloudmask import __version__

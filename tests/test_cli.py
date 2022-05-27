@@ -1,5 +1,3 @@
-from __future__ import annotations
-
 import toml
 
 from cloudmask.cli import CloudMaskCli
