@@ -1,11 +1,9 @@
-from __future__ import annotations
-
 import fire
 
 from cloudmask import __version__
 
 
-class CloudMaskCli:
+class CloudMaskCli(object):
     @property
     def version(self) -> str:
         return __version__

@@ -1,3 +1,6 @@
+# Data
+data/landsat8/
+
 # Log
 lightning_logs*/
 logs/
