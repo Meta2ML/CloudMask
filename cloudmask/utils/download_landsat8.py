@@ -4,15 +4,15 @@ monkey.patch_all()  # isort:skip
 
 import os
 import re
-from typing import List, Dict
+from typing import Dict, List
 
 import requests
 from rich.live import Live
 from rich.panel import Panel
 from rich.progress import (
+    BarColumn,
     Progress,
     SpinnerColumn,
-    BarColumn,
     TaskProgressColumn,
     TimeElapsedColumn,
     TimeRemainingColumn,
@@ -20,8 +20,9 @@ from rich.progress import (
 from rich.table import Table
 
 
-class DownloadLandsat8(object):
+class DownloadLandsat8:
     def __init__(self, root: str = "data/landsat8") -> None:
+        self.name = "Landsat 8 Cloud Cover Assessment Validation Data"
         self.site = (
             "https://landsat.usgs.gov/landsat-8-cloud-cover-assessment-validation-data"
         )
@@ -106,7 +107,7 @@ class DownloadLandsat8(object):
         progress_table = self.show()
 
         self.overall_task = self.overall_progress.add_task(
-            description=f"[green]Download [magenta][link={self.site}]Landsat 8 Cloud Cover Assessment Validation Data[/link][/magenta] to [cyan]{self.root}",
+            description=f"[green]Download [magenta][link={self.site}]{self.name}[/link][/magenta] to [cyan]{self.root}",
             total=len(scenes),
         )
 

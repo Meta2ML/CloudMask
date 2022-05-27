@@ -3,7 +3,7 @@ import fire
 from cloudmask import __version__
 
 
-class CloudMaskCli(object):
+class CloudMaskCli:
     @property
     def version(self) -> str:
         return __version__
