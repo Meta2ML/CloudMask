@@ -114,6 +114,22 @@ pip install cloudmask
 
 `$ cloudmask`
 
+## Data
+
+### Landasat 8
+
+1. Download Landasat 8 data
+
+```bash
+python cloudmask/utils/download_landsat8.py
+```
+
+![download_landsat8](/images/download_landsat8.png)
+
+2. Decompression
+
+### Sentinel 2
+
 ## Changelog
 
 See [CHANGELOG.md](/CHANGELOG.md)
