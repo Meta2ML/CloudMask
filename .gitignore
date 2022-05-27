@@ -1,8 +1,18 @@
+# Log
+lightning_logs*/
+logs/
+checkpoints/
+
+# Jsub
+jsub/
+run.sh
+gpustat.py
+
+# MNIST
+MNIST/
+
 # Vscode
 .vscode/
-
-# Data
-data/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
