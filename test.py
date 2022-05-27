@@ -12,7 +12,7 @@ def main(config: DictConfig) -> None:
 
     # Imports can be nested inside @hydra.main to optimize tab completion
     # https://github.com/facebookresearch/hydra/issues/934
-    from src import utils
+    from cloudmask import utils
     from cloudmask.testing_pipeline import test
 
     # Applies optional utilities

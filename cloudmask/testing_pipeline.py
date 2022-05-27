@@ -9,7 +9,7 @@ from pytorch_lightning import (
     seed_everything,
 )
 
-from src import utils
+from cloudmask import utils
 
 # Get logger
 log = utils.get_logger(__name__)

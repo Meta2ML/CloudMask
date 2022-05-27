@@ -1,6 +1,6 @@
 import fire
 
-from src import __version__
+from cloudmask import __version__
 
 
 class LitMNISTCli:
