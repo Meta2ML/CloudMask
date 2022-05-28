@@ -2,11 +2,11 @@ from gevent import monkey, pool  # isort:skip
 
 monkey.patch_all()  # isort:skip
 
+import glob
 import os
-import re
-from typing import Dict, List
+import tarfile
+from typing import List
 
-import requests
 from rich.live import Live
 from rich.panel import Panel
 from rich.progress import (
@@ -20,53 +20,28 @@ from rich.progress import (
 from rich.table import Table
 
 
-class DownloadLandsat8:
+class DecompressLandsat8:
     def __init__(self, root: str = "data/landsat8") -> None:
         self.name = "Landsat 8 Cloud Cover Assessment Validation Data"
-        self.site = (
-            "https://landsat.usgs.gov/landsat-8-cloud-cover-assessment-validation-data"
-        )
         self.root = root
         self.main()
 
-    def download_scene(self, url: str, type: str) -> None:
-        res = requests.get(url, stream=True)
-        name = os.path.basename(url)
-        path = os.path.join(self.root, type, name)
-        with open(path, "wb") as f:
-            job = self.job_progress.add_task(
-                description=f"[magenta]{type} [cyan]{path}",
-                total=int(res.headers.get("Content-Length")) // (2**20) + 1,
-            )
-            for i in res.iter_content(int(2**20)):
-                f.write(i)
-                self.job_progress.update(job, advance=1)
+    def decompress_scene(self, scene: str) -> None:
+        tar = tarfile.open(scene)
+        members = tar.getmembers()
+        job = self.job_progress.add_task(
+            description=f"[magenta]Extracting [cyan]{scene}",
+            total=len(members),
+        )
+        for member in members:
+            tar.extract(member, self.root)
+            self.job_progress.update(job, advance=1)
+        tar.close()
         self.overall_progress.update(self.overall_task, advance=1)
 
-    def get_scenes(self) -> List[Dict[str, str]]:
-        res = requests.get(self.site)
-        scene_url = re.findall("https://.*?.tar.gz", res.text)
-        scene_class = [
-            "Barren",
-            "Forest",
-            "Grass-Crops",
-            "Shrubland",
-            "Snow-Ice",
-            "Urban",
-            "Water",
-            "Wetlands",
-        ]
-        for i in scene_class:
-            os.makedirs(os.path.join(self.root, i), exist_ok=True)
-        scenes = []
-        for idx, url in enumerate(scene_url):
-            scenes.append(
-                {
-                    "url": url,
-                    "type": scene_class[idx // 12],
-                }
-            )
-        return scenes
+    def get_scenes(self) -> List[str]:
+        pathname = os.path.join(self.root, "*/*")
+        return glob.glob(pathname)
 
     def show(self) -> Table:
         self.overall_progress = Progress(
@@ -105,15 +80,15 @@ class DownloadLandsat8:
         scenes = self.get_scenes()
         progress_table = self.show()
         self.overall_task = self.overall_progress.add_task(
-            description=f"[green]Download [magenta][link={self.site}]{self.name}[/link][/magenta] to [cyan]{self.root}",
+            description=f"[green]Decompress [magenta]{self.name}[/magenta] to [cyan]{self.root}",
             total=len(scenes),
         )
         coroutine_pool = pool.Pool(num_coroutine)
         with Live(progress_table):
-            for item in scenes:
-                coroutine_pool.spawn(self.download_scene, item["url"], item["type"])
+            for scene in scenes:
+                coroutine_pool.spawn(self.decompress_scene, scene)
             coroutine_pool.join()
 
 
 if __name__ == "__main__":
-    DownloadLandsat8()
+    DecompressLandsat8()
