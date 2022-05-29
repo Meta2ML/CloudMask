@@ -1,16 +1,15 @@
-from gevent import monkey, pool  # isort:skip
-
-monkey.patch_all()  # isort:skip
-
 import glob
 import os
 import tarfile
 from typing import List
 
+import gevent
+from gevent.threadpool import ThreadPool
 from rich.live import Live
 from rich.panel import Panel
 from rich.progress import (
     BarColumn,
+    DownloadColumn,
     Progress,
     SpinnerColumn,
     TaskProgressColumn,
@@ -27,16 +26,11 @@ class DecompressLandsat8:
         self.main()
 
     def decompress_scene(self, scene: str) -> None:
-        tar = tarfile.open(scene)
-        members = tar.getmembers()
-        job = self.job_progress.add_task(
-            description=f"[magenta]Extracting [cyan]{scene}",
-            total=len(members),
-        )
-        for member in members:
-            tar.extract(member, self.root)
-            self.job_progress.update(job, advance=1)
-        tar.close()
+        desc = f"[magenta]Extracting... [cyan]{scene}"
+        with self.job_progress.open(scene, "rb", description=desc) as file:
+            tar = tarfile.open(fileobj=file)
+            tar.extractall(self.root)
+            tar.close()
         self.overall_progress.update(self.overall_task, advance=1)
 
     def get_scenes(self) -> List[str]:
@@ -47,8 +41,8 @@ class DecompressLandsat8:
         self.overall_progress = Progress(
             SpinnerColumn(),
             "{task.description}",
-            "[green]{task.completed}/{task.total}",
             BarColumn(),
+            "[green]{task.completed}/{task.total}",
             TaskProgressColumn(),
             TimeElapsedColumn(),
             TimeRemainingColumn(),
@@ -56,8 +50,8 @@ class DecompressLandsat8:
         self.job_progress = Progress(
             SpinnerColumn(),
             "{task.description}",
-            "[green]{task.completed}/{task.total} MB",
             BarColumn(),
+            DownloadColumn(),
             TaskProgressColumn(),
             TimeElapsedColumn(),
             TimeRemainingColumn(),
@@ -76,18 +70,18 @@ class DecompressLandsat8:
         )
         return progress_table
 
-    def main(self, num_coroutine: int = 12) -> None:
+    def main(self, max_workers: int = 12) -> None:
         scenes = self.get_scenes()
         progress_table = self.show()
         self.overall_task = self.overall_progress.add_task(
             description=f"[green]Decompress [magenta]{self.name}[/magenta] to [cyan]{self.root}",
             total=len(scenes),
         )
-        coroutine_pool = pool.Pool(num_coroutine)
-        with Live(progress_table):
+        with Live(progress_table, refresh_per_second=10):
+            pool = ThreadPool(max_workers)
             for scene in scenes:
-                coroutine_pool.spawn(self.decompress_scene, scene)
-            coroutine_pool.join()
+                pool.spawn(self.decompress_scene, scene)
+            gevent.wait()
 
 
 if __name__ == "__main__":
