@@ -118,13 +118,21 @@ pip install cloudmask
 
 ### Landasat 8
 
-1. Download Landasat 8 data
+1. Download Landsat 8 data
 
 ```bash
 python cloudmask/utils/download_landsat8.py
 ```
 
 ![download_landsat8](/images/download_landsat8.png)
+
+2. Decompress Landsat8 data
+
+```bash
+python cloudmask/utils/decompress_landsat8.py
+```
+
+![download_landsat8](/images/decompress_landsat8.png)
 
 2. Decompression
 
