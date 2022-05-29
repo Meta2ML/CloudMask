@@ -1,6 +1,6 @@
 import glob
 import os
-import tarfile
+import subprocess
 from typing import List
 
 import gevent
@@ -9,7 +9,6 @@ from rich.live import Live
 from rich.panel import Panel
 from rich.progress import (
     BarColumn,
-    DownloadColumn,
     Progress,
     SpinnerColumn,
     TaskProgressColumn,
@@ -26,11 +25,12 @@ class DecompressLandsat8:
         self.main()
 
     def decompress_scene(self, scene: str) -> None:
-        desc = f"[magenta]Extracting... [cyan]{scene}"
-        with self.job_progress.open(scene, "rb", description=desc) as file:
-            tar = tarfile.open(fileobj=file)
-            tar.extractall(self.root)
-            tar.close()
+        p = subprocess.run(
+            ["python", "-m", "tarfile", "-ve", scene, self.root],
+            capture_output=True,
+            text=True,
+        )
+        self.overall_progress.console.print(p.stdout)
         self.overall_progress.update(self.overall_task, advance=1)
 
     def get_scenes(self) -> List[str]:
@@ -47,15 +47,6 @@ class DecompressLandsat8:
             TimeElapsedColumn(),
             TimeRemainingColumn(),
         )
-        self.job_progress = Progress(
-            SpinnerColumn(),
-            "{task.description}",
-            BarColumn(),
-            DownloadColumn(),
-            TaskProgressColumn(),
-            TimeElapsedColumn(),
-            TimeRemainingColumn(),
-        )
         progress_table = Table.grid()
         progress_table.add_row(
             Panel(
@@ -64,9 +55,6 @@ class DecompressLandsat8:
                 border_style="green",
                 padding=(1, 1),
             ),
-        )
-        progress_table.add_row(
-            Panel(self.job_progress, title="Jobs", border_style="red", padding=(1, 1)),
         )
         return progress_table
 
