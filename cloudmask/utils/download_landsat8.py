@@ -103,16 +103,12 @@ class DownloadLandsat8:
 
     def main(self, num_coroutine: int = 12) -> None:
         scenes = self.get_scenes()
-
         progress_table = self.show()
-
         self.overall_task = self.overall_progress.add_task(
             description=f"[green]Download [magenta][link={self.site}]{self.name}[/link][/magenta] to [cyan]{self.root}",
             total=len(scenes),
         )
-
         coroutine_pool = pool.Pool(num_coroutine)
-
         with Live(progress_table):
             for item in scenes:
                 coroutine_pool.spawn(self.download_scene, item["url"], item["type"])
