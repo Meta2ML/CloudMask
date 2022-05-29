@@ -55,6 +55,7 @@ class DecompressLandsat8:
             TaskProgressColumn(),
             TimeElapsedColumn(),
             TimeRemainingColumn(),
+            transient=True,
         )
         progress_table = Table.grid()
         progress_table.add_row(
