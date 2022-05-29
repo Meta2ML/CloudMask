@@ -134,8 +134,6 @@ python cloudmask/utils/decompress_landsat8.py
 
 ![download_landsat8](/images/decompress_landsat8.png)
 
-2. Decompression
-
 ### Sentinel 2
 
 ## Changelog
